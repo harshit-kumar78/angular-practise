@@ -6,7 +6,11 @@ import { ApiService } from '../api.service';
   styleUrls: ['./api-data.component.css'],
 })
 export class ApiDataComponent {
+  userdata: any;
   constructor(private apiService: ApiService) {
-    this.apiService.getUserData().subscribe((data) => console.log(data));
+    this.apiService.getUserData().subscribe((data) => {
+      this.userdata = data;
+      console.log(this.userdata);
+    });
   }
 }
