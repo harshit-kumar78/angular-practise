@@ -1,0 +1,28 @@
+<div class="border border-danger">
+  <!-- <h3>{{ userId }} - {{ userName }} - {{ getUserName() }}</h3> -->
+  <!-- <h1>a component</h1> -->
+  <!-- <button class="btn btn-primary" [disabled]="disabled" (click)="clicked()">add user</button> -->
+  <!-- <button
+    class="btn btn-primary"
+    [disabled]="disabled"
+    (click)="clicked($event)"
+  >
+    add user
+  </button>
+  <h1>{{ user }}</h1> -->
+  <h3>using $event reserve keyword</h3>
+  <input type="text" class="form-control" (input)="input($event)" />
+  <p>{{ vInput }}</p>
+  <br />
+  <br />
+  <h3>Two way binding</h3>
+  <input type="text" class="form-control" [(ngModel)]="input_value" />
+  {{ input_value }}
+
+  <p *ngIf="value; else elseblock">this is if block</p>
+  <!-- <p *ngIf="!value">this is else block</p> -->
+
+  <ng-template #elseblock>
+    <p>this is else block</p>
+  </ng-template>
+</div>

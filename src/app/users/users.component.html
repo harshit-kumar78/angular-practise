@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <app-user></app-user>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="one way binding"
+        (input)="captureInput($event)"
+      />
+      <br />
+      <br />
+      <input
+        type="text"
+        class="form-control"
+        placeholder="one way binding"
+        (input)="captureInput2($event)"
+      />
+      <br />
+      <br />
+      <!-- <input type="text" placeholder="two way binding" [(ngModel)]="inVal" /> -->
+      <button
+        class="btn btn-primary"
+        [disabled]="allowUser"
+        (click)="isButtonClickedByUser()"
+      >
+        login
+      </button>
+      {{ inVal }}
+      <!-- {{ allowUser }} - {{ isButtonClicked }} - -->
+      <!-- <p [innerText]="allowUser"></p> -->
+      <br />
+      <br />
+      <h4 *ngIf="isButtonClicked">button is clicked {{ isButtonClicked }}</h4>
+      <h4 *ngIf="!isButtonClicked">button is clicked {{ isButtonClicked }}</h4>
+
+      <!-- <h4 *ngIf="isButtonClicked; else buttonclick">
+        button is clicked {{ isButtonClicked }}
+      </h4> -->
+      <!-- <ng-template #buttonclick>
+        <h4>button is clicked {{ isButtonClicked }}</h4>
+      </ng-template> -->
+      <br />
+      <div class="my-2">
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+      </div>
+    </div>
+  </div>
+  <h1 *ngFor="let user of users">{{ user }}</h1>
+</div>

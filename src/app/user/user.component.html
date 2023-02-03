@@ -1,0 +1,7 @@
+<!-- <h1>user component works</h1> -->
+<h3
+  [ngStyle]="{ 'background-color': getColor() }"
+  [ngClass]="{ offline: userStatus === 'offline' }"
+>
+  Person with id : {{ userId }} is {{ getStatus() }}
+</h3>

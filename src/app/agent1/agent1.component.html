@@ -1,0 +1,9 @@
+<p>agent1 booking</p>
+<input type="text" #agent1 placeholder="agent1" />
+<button type="submit" class="btn btn-primary" (click)="booking(agent1.value)">
+  agent 1
+</button>
+
+<ul>
+  <li *ngFor="let data of tickets1">{{ data }}</li>
+</ul>

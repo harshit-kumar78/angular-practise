@@ -1,0 +1,9 @@
+<p>c works!</p>
+<p
+  [ngStyle]="{ 'background-color': getColor() }"
+  [ngClass]="{ offline: userStatus == 'offline' }"
+>
+  user is {{ userStatus }}
+</p>
+
+<p *ngFor="let user of userList">{{ user }}</p>

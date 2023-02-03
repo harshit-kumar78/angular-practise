@@ -1,0 +1,136 @@
+<!-- <div class="container">
+  <h1>Registration Form</h1>
+  <form [formGroup]="registerForm">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control" formControlName="firstName" />
+      <div
+        *ngIf="registerForm.controls['firstName'].errors"
+        class="alert alert-danger"
+      >
+        Firstname field is invalid.
+        <p *ngIf="registerForm.controls['firstName'].errors?.['required']">
+          This field is required!
+        </p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" formControlName="lastName" />
+      <div
+        *ngIf="registerForm.controls['lastName'].errors"
+        class="alert alert-danger"
+      >
+        Lastname field is invalid.
+        <p *ngIf="registerForm.controls['lastName'].errors?.['required']">
+          This field is required!
+        </p>
+      </div>
+    </div>
+    <div class="form-group">
+      <fieldset formGroupName="address">
+        <legend>Address:</legend>
+        <label>Street</label>
+        <input type="text" class="form-control" formControlName="street" />
+        <label>Zip</label>
+        <input type="text" class="form-control" formControlName="zip" />
+        <label>City</label>
+        <input type="text" class="form-control" formControlName="city" />
+      </fieldset>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="submitted = true">
+      Submit
+    </button>
+  </form>
+  <br />
+  <div [hidden]="!submitted">
+    <h3>Employee Details</h3>
+    <p>First Name: {{ registerForm.get("firstName")?.value }}</p>
+    <p>Last Name: {{ registerForm.get("lastName")?.value }}</p>
+    <p>Street: {{ registerForm.get("address.street")?.value }}</p>
+    <p>Zip: {{ registerForm.get("address.zip")?.value }}</p>
+    <p>City: {{ registerForm.get("address.city")?.value }}</p>
+  </div>
+</div> -->
+
+<div class="col-md-6">
+  <h3>contact form</h3>
+  <form
+    class="form"
+    #contactForm="ngForm"
+    (ngSubmit)="formSubmit(contactForm.value); contactForm.reset()"
+  >
+    <!-- <form
+    class="form"
+    #contactForm="ngForm"
+    (ngSubmit)="formSubmit(contactForm.value)"
+  > -->
+    <div class="form-group my-2">
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter your name"
+        class="form-control"
+        [ngModel]="user.name"
+        required
+        #name="ngModel"
+        minlength="5"
+      />
+      <span *ngIf="name.touched && name.invalid" class="text-danger"
+        >please enter your name</span
+      >
+    </div>
+    <div class="form-group my-2">
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        class="form-control"
+        [ngModel]="user.email"
+        required
+        #email="ngModel"
+      />
+      <span *ngIf="email.touched && email.invalid" class="text-danger"
+        >please enter your email</span
+      >
+    </div>
+
+    <div class="form-group my-2">
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter your password"
+        class="form-control"
+        [ngModel]="user.password"
+        required
+        #password="ngModel"
+      />
+      <span *ngIf="password.touched && password.invalid" class="text-danger"
+        >please enter your password</span
+      >
+    </div>
+
+    <div class="form-group my-2">
+      <input
+        type="submit"
+        name="send"
+        class="btn btn-success mx-2"
+        [disabled]="contactForm.invalid"
+      />
+      <!-- <button
+        type="submit"
+        class="btn btn-primary"
+        (click)="contactForm.reset()"
+        value=""
+      >
+        reset
+      </button> -->
+      <input
+        class="btn btn-primary"
+        type="reset"
+        value="reset"
+        (click)="contactForm.reset()"
+      />
+    </div>
+  </form>
+</div>

@@ -1,0 +1,40 @@
+<h3>{{ title }}</h3>
+
+<form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+  <input
+    type="text"
+    required
+    #name="ngModel"
+    name="name"
+    placeholder="Enter name"
+    ngModel
+    email
+  />
+  <br />
+  <span *ngIf="name.invalid && name.touched" class="text-danger"
+    >Please enter a valid input</span
+  >
+  <br />
+
+  <input
+    type="password"
+    #password="ngModel"
+    name="password"
+    placeholder="Enter password"
+    ngModel
+    required
+    minlength="2"
+  />
+  <br />
+
+  <span *ngIf="password.invalid && password.touched" class="text-danger"
+    >Please enter a valid input</span
+  >
+  <br />
+
+  <button type="submit" [disabled]="loginForm.invalid">Login</button>
+</form>
+
+<!-- <button type="submit" (click)="loginUser(loginForm.value)">
+  outside Login
+</button> -->
