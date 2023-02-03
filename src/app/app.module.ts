@@ -21,6 +21,8 @@ import { AddressService } from './address.service';
 import { Agent1Component } from './agent1/agent1.component';
 import { Agent2Component } from './agent2/agent2.component';
 import { BusbookingService } from './busbooking.service';
+import { ApiDataComponent } from './api-data/api-data.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,8 +40,9 @@ import { BusbookingService } from './busbooking.service';
     ComponentOneComponent,
     Agent1Component,
     Agent2Component,
+    ApiDataComponent,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
