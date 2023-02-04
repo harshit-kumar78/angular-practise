@@ -23,6 +23,11 @@ import { Agent2Component } from './agent2/agent2.component';
 import { BusbookingService } from './busbooking.service';
 import { ApiDataComponent } from './api-data/api-data.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
+import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { SignupComponent } from './signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,8 +46,18 @@ import { HttpClientModule } from '@angular/common/http';
     Agent1Component,
     Agent2Component,
     ApiDataComponent,
+    AboutComponent,
+    LoginComponent,
+    HomeComponent,
+    SignupComponent,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

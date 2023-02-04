@@ -7,3 +7,21 @@
 </div>
 
 <app-api-data></app-api-data>
+<br />
+<br />
+<h1 class="text-danger">Basic routing</h1>
+
+<div class="d-flex">
+  <a
+    routerLink="/"
+    class="mx-3"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Home</a
+  >
+  <a routerLink="about" class="mx-3" routerLinkActive="active">About</a>
+  <a routerLink="login" class="mx-3" routerLinkActive="active">Login</a>
+  <a routerLink="signup" class="mx-3" routerLinkActive="active">Signup</a>
+</div>
+
+<router-outlet></router-outlet>
