@@ -28,6 +28,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +51,7 @@ import { SignupComponent } from './signup/signup.component';
     LoginComponent,
     HomeComponent,
     SignupComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
