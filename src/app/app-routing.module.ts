@@ -30,7 +30,15 @@ const routes: Routes = [
     component: SignupComponent,
   },
   {
+    path: 'profile',
+    component: SignupComponent,
+  },
+  {
     path: 'profile/:username',
+    component: ProfileComponent,
+  },
+  {
+    path: 'profile/:username/:userid',
     component: ProfileComponent,
   },
   {
