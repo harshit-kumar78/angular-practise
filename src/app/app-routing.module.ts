@@ -11,9 +11,14 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
   },
+  //   {
+  //     path: 'about',
+  //     component: AboutComponent,
+  //   },
   {
     path: 'about',
-    component: AboutComponent,
+    redirectTo: 'login',
+    pathMatch: 'full',
   },
   {
     path: '',
