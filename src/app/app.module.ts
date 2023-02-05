@@ -29,6 +29,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     SignupComponent,
     PageNotFoundComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
