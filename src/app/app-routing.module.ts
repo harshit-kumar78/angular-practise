@@ -42,6 +42,16 @@ const routes: Routes = [
     component: ProfileComponent,
   },
   {
+    path: 'customer',
+    loadChildren: () =>
+      import('./customer/customer.module').then((mod) => mod.CustomerModule),
+  },
+  {
+    path: 'order',
+    loadChildren: () =>
+      import('./order/order.module').then((mod) => mod.OrderModule),
+  },
+  {
     path: '**',
     component: PageNotFoundComponent,
   },
