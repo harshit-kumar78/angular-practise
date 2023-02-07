@@ -31,6 +31,8 @@ import { SignupComponent } from './signup/signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ThreeComponent } from './three/three.component';
+import { CustomerModule } from './customer/customer.module';
+import { OrderModule } from './order/order.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +65,8 @@ import { ThreeComponent } from './three/three.component';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    CustomerModule,
+    OrderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
