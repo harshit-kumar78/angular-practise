@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderComponent implements OnInit {
   ngOnInit(): void {
-    console.log(localStorage.getItem('local'));
-    console.log(sessionStorage.getItem('session'));
+    let rs = JSON.parse(localStorage.getItem('custdata')!);
+
+    console.log(rs.name + '->' + rs.salary + '->' + rs.age);
   }
 }
