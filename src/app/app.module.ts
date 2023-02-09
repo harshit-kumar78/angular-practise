@@ -33,6 +33,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { ThreeComponent } from './three/three.component';
 import { CustomerModule } from './customer/customer.module';
 import { OrderModule } from './order/order.module';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +61,8 @@ import { OrderModule } from './order/order.module';
     PageNotFoundComponent,
     ProfileComponent,
     ThreeComponent,
+    EmployeeComponent,
+    EmployeedetailsComponent,
   ],
   imports: [
     BrowserModule,
