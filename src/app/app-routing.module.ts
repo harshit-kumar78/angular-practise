@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { CustomerComponent } from './customer/customer.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { OrderComponent } from './order/order.component';
@@ -55,6 +57,22 @@ const routes: Routes = [
     loadChildren: () =>
       import('./order/order.module').then((mod) => mod.OrderModule),
     component: OrderComponent,
+  },
+  {
+    path: 'employee',
+    loadChildren: () =>
+      import('./employee/employee.module').then((mod) => mod.EmployeeModule),
+    component: EmployeeComponent,
+  },
+  {
+    path: 'employeedetails',
+    component: EmployeedetailsComponent,
+    outlet: 'employeelist',
+  },
+  {
+    path: 'details',
+    component: OrderComponent,
+    outlet: 'employeelist',
   },
   {
     path: '**',

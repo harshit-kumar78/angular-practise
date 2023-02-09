@@ -35,6 +35,7 @@ import { CustomerModule } from './customer/customer.module';
 import { OrderModule } from './order/order.module';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
+import { EmployeeModule } from './employee/employee.module';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,7 @@ import { EmployeedetailsComponent } from './employeedetails/employeedetails.comp
     PageNotFoundComponent,
     ProfileComponent,
     ThreeComponent,
-    EmployeeComponent,
+
     EmployeedetailsComponent,
   ],
   imports: [
@@ -72,6 +73,7 @@ import { EmployeedetailsComponent } from './employeedetails/employeedetails.comp
     AppRoutingModule,
     // CustomerModule,
     // OrderModule,
+    // EmployeeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

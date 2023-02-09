@@ -1,1 +1,8 @@
-<p>employeedetails works!</p>
+<h1>employeedetails list</h1>
+<ul>
+  <li *ngFor="let employee of employees">
+    <b>ID: </b>{{ employee.id }} - <b>NAME: </b>{{ employee.name }} -
+    <b>EMAIL: </b>{{ employee.email }} -<b>PHONE: </b>{{ employee.phone }}
+  </li>
+</ul>
+<button type="button" (click)="close()">close</button>

@@ -27,9 +27,19 @@
 
 <br />
 <button class="btn btn-default" (click)="onClick()">click here</button>
-<router-outlet></router-outlet>
+
 <h1>Interace</h1>
 <app-three></app-three>
-<a routerLink="customer">customer module</a>
-<a routerLink="order">order module</a>
-<app-employee></app-employee>
+<a routerLink="customer" class="mx-3">customer module</a>
+<a routerLink="order" class="mx-3">order module</a>
+<a routerLink="employee" class="mx-3">employee name</a>
+<a
+  [routerLink]="[{ outlets: { employeelist: 'employeedetails' } }]"
+  class="mx-3"
+  >employee details</a
+>
+<a [routerLink]="[{ outlets: { employeelist: 'details' } }]" class="mx-3"
+  >employee details</a
+>
+<router-outlet></router-outlet>
+<router-outlet name="employeelist"></router-outlet>
