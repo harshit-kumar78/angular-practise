@@ -36,6 +36,7 @@ import { OrderModule } from './order/order.module';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
 import { EmployeeModule } from './employee/employee.module';
+import { JquerydemoComponent } from './jquerydemo/jquerydemo.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { EmployeeModule } from './employee/employee.module';
     ThreeComponent,
 
     EmployeedetailsComponent,
+     JquerydemoComponent,
   ],
   imports: [
     BrowserModule,
