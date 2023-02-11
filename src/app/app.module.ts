@@ -37,6 +37,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
 import { EmployeeModule } from './employee/employee.module';
 import { JquerydemoComponent } from './jquerydemo/jquerydemo.component';
+import { MotherComponent } from './mother/mother.component';
+import { SonComponent } from './son/son.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +68,8 @@ import { JquerydemoComponent } from './jquerydemo/jquerydemo.component';
 
     EmployeedetailsComponent,
      JquerydemoComponent,
+     MotherComponent,
+     SonComponent,
   ],
   imports: [
     BrowserModule,
