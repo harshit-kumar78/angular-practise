@@ -41,7 +41,8 @@ import { MotherComponent } from './mother/mother.component';
 import { SonComponent } from './son/son.component';
 import { SonDirective } from './son.directive';
 import { LogoutComponent } from './logout/logout.component';
-
+import { CookieService } from 'ngx-cookie-service';
+import { CookieComponent } from './cookie/cookie.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,11 +70,12 @@ import { LogoutComponent } from './logout/logout.component';
     ThreeComponent,
 
     EmployeedetailsComponent,
-     JquerydemoComponent,
-     MotherComponent,
-     SonComponent,
-     SonDirective,
-     LogoutComponent,
+    JquerydemoComponent,
+    MotherComponent,
+    SonComponent,
+    SonDirective,
+    LogoutComponent,
+    CookieComponent,
   ],
   imports: [
     BrowserModule,
@@ -85,7 +87,7 @@ import { LogoutComponent } from './logout/logout.component';
     // OrderModule,
     // EmployeeModule,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
