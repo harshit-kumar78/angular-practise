@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { SonComponent } from '../son/son.component';
 
 @Component({
@@ -8,5 +8,6 @@ import { SonComponent } from '../son/son.component';
 })
 export class MotherComponent {
   @ViewChild(SonComponent) sonComponent!: SonComponent;
+
   constructor() {}
 }
