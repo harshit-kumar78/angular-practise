@@ -9,11 +9,4 @@ import { SonComponent } from '../son/son.component';
 export class MotherComponent {
   @ViewChild(SonComponent) sonComponent!: SonComponent;
   constructor() {}
-
-  increment() {
-    this.sonComponent.incrementSalary();
-  }
-  decrement() {
-    this.sonComponent.decrementSalary();
-  }
 }

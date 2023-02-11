@@ -39,6 +39,7 @@ import { EmployeeModule } from './employee/employee.module';
 import { JquerydemoComponent } from './jquerydemo/jquerydemo.component';
 import { MotherComponent } from './mother/mother.component';
 import { SonComponent } from './son/son.component';
+import { SonDirective } from './son.directive';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { SonComponent } from './son/son.component';
      JquerydemoComponent,
      MotherComponent,
      SonComponent,
+     SonDirective,
   ],
   imports: [
     BrowserModule,
