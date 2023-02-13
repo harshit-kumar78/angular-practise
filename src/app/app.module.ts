@@ -43,6 +43,8 @@ import { SonDirective } from './son.directive';
 import { LogoutComponent } from './logout/logout.component';
 import { CookieService } from 'ngx-cookie-service';
 import { CookieComponent } from './cookie/cookie.component';
+import { ChildComponentComponent } from './child-component/child-component.component';
+import { ParentComponentComponent } from './parent-component/parent-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,6 +78,8 @@ import { CookieComponent } from './cookie/cookie.component';
     SonDirective,
     LogoutComponent,
     CookieComponent,
+    ChildComponentComponent,
+    ParentComponentComponent,
   ],
   imports: [
     BrowserModule,
