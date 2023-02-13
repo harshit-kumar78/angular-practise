@@ -45,6 +45,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { CookieComponent } from './cookie/cookie.component';
 import { ChildComponentComponent } from './child-component/child-component.component';
 import { ParentComponentComponent } from './parent-component/parent-component.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,7 +88,7 @@ import { ParentComponentComponent } from './parent-component/parent-component.co
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    // CustomerModule,
+    CustomerModule,
     // OrderModule,
     // EmployeeModule,
   ],
