@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EmpsalaryService } from './empsalary.service';
@@ -7,9 +7,16 @@ import { EmpsalaryService } from './empsalary.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  randomsalary!: number;
-  constructor(private salary: EmpsalaryService) {
-    this.randomsalary = this.salary.getEmpSalary();
+export class AppComponent implements OnInit {
+  address: any;
+
+  constructor() {}
+  ngOnInit(): void {
+    this.address = {
+      street: 'vijay path',
+      road: 'school gali',
+      city: 'deoghar',
+      state: 'jharkhand',
+    };
   }
 }
