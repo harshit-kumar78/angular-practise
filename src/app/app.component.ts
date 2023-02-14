@@ -9,7 +9,12 @@ import { EmpsalaryService } from './empsalary.service';
 })
 export class AppComponent implements OnInit {
   address: any;
-
+  ourText = 'learn angular by own ';
+  website = {
+    logo: 'https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg',
+  };
+  loginTitle = 'customer login page';
+  redText = 'redText';
   constructor() {}
   ngOnInit(): void {
     this.address = {
