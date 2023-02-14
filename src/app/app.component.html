@@ -1,10 +1,19 @@
-<h2 [ngClass]="redText">interpolation vs property binding</h2>
+<h3>Pipes in A ngular</h3>
 
-<input type="text" [disabled]="disabled" value="{{ yourName }}" />
-<br />
-<br />
-<input type="text" disabled="{{ disabled }}" value="{{ yourName }}" />
+<!-- pipes are used to transform the data  -->
+<!-- pipe is used by using | -->
 
-<button type="button" (click)="edit()">edit</button>
-
-<!-- from above , we knoe property binding will be used in boolean functionality -->
+<!-- pipe types -->
+<!-- build in ==> parametized pipes chaining -->
+<!-- custome ==> filter -->
+<p>{{ address.road | uppercase }}</p>
+<p>{{ address.salary | currency : "INR" }}</p>
+<p>{{ date | date : "dd/mm/yyyy" }}</p>
+<p>{{ date | date : "fullDate" | slice : 0 : 8 | uppercase }}</p>
+<p>{{ address.road | mypipes : "female" }}</p>
+<p>{{ address | json | uppercase }}</p>
+<!-- pipe name -->
+<!-- uppercase -->
+<!-- lowercase -->
+<!-- slice -->
+<!-- date -->

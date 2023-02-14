@@ -17,12 +17,14 @@ export class AppComponent implements OnInit {
   redText = 'redText';
   yourName = 'Harshit';
   disabled = true;
+  date = Date.now();
   constructor() {}
   ngOnInit(): void {
     this.address = {
-      street: 'vijay path',
+      street: 789,
       road: 'school gali',
       city: 'deoghar',
+      salary: 7800,
       state: 'jharkhand',
     };
   }
