@@ -1,30 +1,10 @@
-<p>property binding concept</p>
+<h2 [ngClass]="redText">interpolation vs property binding</h2>
 
-<!-- property binding is a one way mechanism -->
-<!-- it lets to set the property of a view element -->
-<!-- it involves updating the property in the component and bind it to the element in the view template -->
-<!-- it uses [] for data binding -->
+<input type="text" [disabled]="disabled" value="{{ yourName }}" />
+<br />
+<br />
+<input type="text" disabled="{{ disabled }}" value="{{ yourName }}" />
 
-<!-- types of property binding -->
-<!-- 1 component -->
-<!-- 2 element -->
-<!-- 3 directive -->
+<button type="button" (click)="edit()">edit</button>
 
-<!-- implemetation of property binding done in three ways -->
-<!-- 1 brackets [] -->
-<!-- 2 bind-prefix -->
-<!-- 3 interpolation {{}} -->
-
-<p>{{ ourText }}</p>
-<!-- other way -->
-<p [innerHTML]="ourText"></p>
-<img [src]="website.logo" height="150" />
-<img bind-src="website.logo" height="150" />
-<img src="{{ website.logo }}" height="150" />
-
-<!-- property binding on login component -->
-
-<app-login [loginTitle]="loginTitle"></app-login>
-
-<!-- directive binding -->
-<p [ngClass]="redText">{{ ourText }}</p>
+<!-- from above , we knoe property binding will be used in boolean functionality -->

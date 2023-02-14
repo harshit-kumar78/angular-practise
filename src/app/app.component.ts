@@ -15,6 +15,8 @@ export class AppComponent implements OnInit {
   };
   loginTitle = 'customer login page';
   redText = 'redText';
+  yourName = 'Harshit';
+  disabled = true;
   constructor() {}
   ngOnInit(): void {
     this.address = {
@@ -23,5 +25,9 @@ export class AppComponent implements OnInit {
       city: 'deoghar',
       state: 'jharkhand',
     };
+  }
+
+  edit() {
+    this.disabled = false;
   }
 }
