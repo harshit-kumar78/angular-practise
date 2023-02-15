@@ -1,19 +1,25 @@
-<h3>Pipes in A ngular</h3>
+<div class="container" style="text-align: center" *ngIf="!submitted">
+  <form>
+    <label>username</label>&nbsp;
+    <input type="text" placeholder="enter username" #username />
+    <br />
+    <br />
+    <label>password</label>&nbsp;
+    <input type="password" placeholder="enter password" #password />
+    <br />
+    <br />
+    <button type="button" (click)="onSubmit(username.value, password.value)">
+      Login
+    </button>
+  </form>
+</div>
 
-<!-- pipes are used to transform the data  -->
-<!-- pipe is used by using | -->
-
-<!-- pipe types -->
-<!-- build in ==> parametized pipes chaining -->
-<!-- custome ==> filter -->
-<p>{{ address.road | uppercase }}</p>
-<p>{{ address.salary | currency : "INR" }}</p>
-<p>{{ date | date : "dd/mm/yyyy" }}</p>
-<p>{{ date | date : "fullDate" | slice : 0 : 8 | uppercase }}</p>
-<p>{{ address.road | mypipes : "female" }}</p>
-<p>{{ address | json | uppercase }}</p>
-<!-- pipe name -->
-<!-- uppercase -->
-<!-- lowercase -->
-<!-- slice -->
-<!-- date -->
+<div *ngIf="submitted">
+  <div *ngIf="isAuthenticated; else failureMsg">
+    <h1>welcome, {{ username }}</h1>
+  </div>
+  <ng-template #failureMsg>
+    <h2>wrong credentials</h2>
+  </ng-template>
+  <button type="button" (click)="submitted = false">back</button>
+</div>

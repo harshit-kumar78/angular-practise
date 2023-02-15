@@ -9,6 +9,7 @@ import { EmpsalaryService } from './empsalary.service';
 })
 export class AppComponent implements OnInit {
   address: any;
+  isAuthenticated!: boolean;
   ourText = 'learn angular by own ';
   website = {
     logo: 'https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg',
@@ -16,6 +17,7 @@ export class AppComponent implements OnInit {
   loginTitle = 'customer login page';
   redText = 'redText';
   yourName = 'Harshit';
+  submitted = false;
   disabled = true;
   date = Date.now();
   constructor() {}
@@ -28,8 +30,18 @@ export class AppComponent implements OnInit {
       state: 'jharkhand',
     };
   }
-
+  username!: string;
   edit() {
     this.disabled = false;
+  }
+  onSubmit(username: string, password: string) {
+    this.submitted = true;
+    if (username == 'admin' && password == 'admin') {
+      this.username = username;
+      this.isAuthenticated = true;
+    } else {
+      console.log('failuremsg');
+      this.isAuthenticated = false;
+    }
   }
 }
