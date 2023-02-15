@@ -1,25 +1,12 @@
-<div class="container" style="text-align: center" *ngIf="!submitted">
-  <form>
-    <label>username</label>&nbsp;
-    <input type="text" placeholder="enter username" #username />
-    <br />
-    <br />
-    <label>password</label>&nbsp;
-    <input type="password" placeholder="enter password" #password />
-    <br />
-    <br />
-    <button type="button" (click)="onSubmit(username.value, password.value)">
-      Login
-    </button>
-  </form>
+<h3>choice is {{ choice }}</h3>
+
+<div [ngSwitch]="choice">
+  <p *ngSwitchCase="1">one</p>
+  <p *ngSwitchCase="2">two</p>
+  <p *ngSwitchCase="3">three</p>
+  <p *ngSwitchCase="4">four</p>
+  <p *ngSwitchCase="5">five</p>
+  <p *ngSwitchDefault>default</p>
 </div>
 
-<div *ngIf="submitted">
-  <div *ngIf="isAuthenticated; else failureMsg">
-    <h1>welcome, {{ username }}</h1>
-  </div>
-  <ng-template #failureMsg>
-    <h2>wrong credentials</h2>
-  </ng-template>
-  <button type="button" (click)="submitted = false">back</button>
-</div>
+<button type="button" (click)="nextChoice()">next</button>

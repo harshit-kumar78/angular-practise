@@ -44,4 +44,8 @@ export class AppComponent implements OnInit {
       this.isAuthenticated = false;
     }
   }
+  choice = 0;
+  nextChoice() {
+    this.choice++;
+  }
 }
