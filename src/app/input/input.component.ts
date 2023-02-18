@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./input.component.css'],
 })
 export class InputComponent {
-  data!: string;
+  data: string[] = [];
   passValue({ target }: any) {
     const { value } = target;
-    this.data = value;
+    console.log(value);
+    this.data.push(value);
   }
 }
