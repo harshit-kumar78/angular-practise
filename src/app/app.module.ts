@@ -46,6 +46,8 @@ import { CookieComponent } from './cookie/cookie.component';
 import { ChildComponentComponent } from './child-component/child-component.component';
 import { ParentComponentComponent } from './parent-component/parent-component.component';
 import { MypipesPipe } from './mypipes.pipe';
+import { InputComponent } from './input/input.component';
+import { InputChildComponent } from './input-child/input-child.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +85,8 @@ import { MypipesPipe } from './mypipes.pipe';
     ChildComponentComponent,
     ParentComponentComponent,
     MypipesPipe,
+    InputComponent,
+    InputChildComponent,
   ],
   imports: [
     BrowserModule,
