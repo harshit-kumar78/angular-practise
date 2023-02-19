@@ -48,6 +48,8 @@ import { ParentComponentComponent } from './parent-component/parent-component.co
 import { MypipesPipe } from './mypipes.pipe';
 import { InputComponent } from './input/input.component';
 import { InputChildComponent } from './input-child/input-child.component';
+import { OutputComponent } from './output/output.component';
+import { OuputChildComponent } from './ouput-child/ouput-child.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +89,8 @@ import { InputChildComponent } from './input-child/input-child.component';
     MypipesPipe,
     InputComponent,
     InputChildComponent,
+    OutputComponent,
+    OuputChildComponent,
   ],
   imports: [
     BrowserModule,
