@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./input-child.component.css'],
 })
 export class InputChildComponent {
-  @Input() name!: string[];
+  @Input('object') objs: any = {};
 }

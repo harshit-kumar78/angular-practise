@@ -7,9 +7,15 @@ import { Component } from '@angular/core';
 })
 export class InputComponent {
   data: string[] = [];
+  obj: any = {};
   passValue({ target }: any) {
     const { value } = target;
-    console.log(value);
+    // console.log(value);
     this.data.push(value);
+
+    this.obj = {
+      name: value,
+      id: Math.random(),
+    };
   }
 }
