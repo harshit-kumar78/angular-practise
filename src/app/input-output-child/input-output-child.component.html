@@ -1,0 +1,7 @@
+<!-- <p>input-output-child works!</p> -->
+<ul>
+  <li *ngFor="let food of foods; let i = index">
+    {{ food }}-{{ i }}
+    <button type="button" (click)="deleteFood(i)">delete</button>
+  </li>
+</ul>

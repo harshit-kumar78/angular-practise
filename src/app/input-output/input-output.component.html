@@ -1,0 +1,14 @@
+<label>Enter food name:</label>
+<input
+  type="text"
+  #foodin
+  placeholder="enter food name"
+  (keyup.enter)="passValue(foodin.value)"
+/>
+
+<app-input-output-child
+  [foods]="foods"
+  (delEvt)="removeFood($event)"
+></app-input-output-child>
+<hr />
+<p *ngIf="deletedFood">you remove - {{ deletedFood }}</p>
