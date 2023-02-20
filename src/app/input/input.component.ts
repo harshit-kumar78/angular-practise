@@ -6,16 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./input.component.css'],
 })
 export class InputComponent {
-  data: string[] = [];
-  obj: any = {};
-  passValue({ target }: any) {
-    const { value } = target;
-    // console.log(value);
-    this.data.push(value);
-
-    this.obj = {
-      name: value,
-      id: Math.random(),
-    };
+  data: number = 1;
+  addQty(qty: any) {
+    this.data = qty;
   }
 }

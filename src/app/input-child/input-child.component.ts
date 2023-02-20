@@ -5,6 +5,4 @@ import { Component, Input } from '@angular/core';
   templateUrl: './input-child.component.html',
   styleUrls: ['./input-child.component.css'],
 })
-export class InputChildComponent {
-  @Input('object') objs: any = {};
-}
+export class InputChildComponent {}

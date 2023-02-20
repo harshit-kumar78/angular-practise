@@ -1,2 +1,6 @@
-<input type="text" (keyup.enter)="passValue($event)" />
-<app-input-child [object]="obj"></app-input-child>
+<h1>enter product qty</h1>
+<input type="text" #qty placeholder="enter quantity" />
+<button (click)="addQty(qty.value)">Add Qty</button>
+<p>
+  <strong>Total qty :{{ data }}</strong>
+</p>
