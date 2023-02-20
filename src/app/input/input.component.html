@@ -1,6 +1,11 @@
 <h1>enter product qty</h1>
-<input type="text" #qty placeholder="enter quantity" />
+<input type="text" #qty placeholder="enter quantity" [value]="data" />
 <button (click)="addQty(qty.value)">Add Qty</button>
 <p>
   <strong>Total qty :{{ data }}</strong>
 </p>
+
+<hr />
+<br />
+
+<app-product [(data)]="data"></app-product>

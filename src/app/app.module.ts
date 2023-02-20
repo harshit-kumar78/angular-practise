@@ -52,6 +52,7 @@ import { OutputComponent } from './output/output.component';
 import { OuputChildComponent } from './ouput-child/ouput-child.component';
 import { InputOutputComponent } from './input-output/input-output.component';
 import { InputOutputChildComponent } from './input-output-child/input-output-child.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { InputOutputChildComponent } from './input-output-child/input-output-chi
     OuputChildComponent,
     InputOutputComponent,
     InputOutputChildComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
