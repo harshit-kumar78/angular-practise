@@ -10,4 +10,7 @@ export class InputComponent {
   addQty(qty: any) {
     this.data = qty;
   }
+  showData(value: number) {
+    this.data = value;
+  }
 }
